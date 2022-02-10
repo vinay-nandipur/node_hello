@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vinay-nandipur/node_hello/issues"
   },
-  "homepage": "https://github.com/vinay-nandipur/node_hello#readme"
+  "homepage": "https://github.com/vinay-nandipur/node_hello#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }

@@ -4,7 +4,8 @@
   "description": "sample hello app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src",
+    "test": "jest src/app.test.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/vinay-nandipur/node_hello#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }

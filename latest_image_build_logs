@@ -1,60 +1,48 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:4fbb9c5375c52b89b4e5c3bda214e669e5184c9009a3a29def30d8afb9e402f2
-#1 transferring dockerfile: 37B done
+#1 sha256:641f9d8d53a74cd1b9afad4f9b3df1b0f32dd522c4fd210d99fdf8b8b513e8cb
+#1 transferring dockerfile: 37B 0.0s done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:3b4740e0a2b2176c90ceb3ecec8609f6f6269229a206a70dc3fd0eaebcb4f962
+#2 sha256:c67c681865a5d6939d1d1430d62a770ca6e1ec107c7e6f8017a305a07b0f8ae3
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/node:lts-alpine3.15
 #3 sha256:502b49e310c52ebaab40b54f58fc959dd660ca0744192ae78298529130c6bc11
-#3 DONE 2.8s
+#3 DONE 2.6s
 
 #4 [1/5] FROM docker.io/library/node:lts-alpine3.15@sha256:2c6c59cf4d34d4f937ddfcf33bab9d8bbad8658d1b9de7b97622566a52167f2b
 #4 sha256:c6bf6190e77eed1fbe78b5666c7dbfa00e398a36d5192eb42699071abe0d72a2
 #4 DONE 0.0s
 
 #6 [internal] load build context
-#6 sha256:5493ca0ed8a8fc317082cb65fb2fb27b45c20792a7af88ab0a955fdde1733d2b
-#6 transferring context: 30.84kB 0.0s done
-#6 DONE 0.0s
+#6 sha256:c74b8a85fe13b714ea5aaad72d8c210329e2545c9dc82c06eda6057f2a1f847b
+#6 transferring context: 484.47kB 0.4s done
+#6 DONE 0.4s
 
 #5 [2/5] WORKDIR /app
 #5 sha256:626f1797ef362e487cf68e9b68476011f12cc264e1af9f6e55eaea19a0dd0540
 #5 CACHED
 
 #7 [3/5] COPY package.json /app
-#7 sha256:5b2765c62661baf984b83320f798c3bb50b0481a0f7b2341ed329fffccae2438
+#7 sha256:288aac61aca8ebc13297a3220ce63e768daa137387069fc92b5530e4f5810c40
 #7 CACHED
 
 #8 [4/5] RUN npm install --only=production && npm cache clean --force
-#8 sha256:007397a1d96345b850478afe4230338ec7ad25cabc4b00cd14e2e6d7d85588cd
-#8 2.255 
-#8 2.255 added 50 packages, and audited 51 packages in 2s
-#8 2.255 
-#8 2.255 2 packages are looking for funding
-#8 2.255   run `npm fund` for details
-#8 2.256 
-#8 2.256 found 0 vulnerabilities
-#8 2.257 npm notice 
-#8 2.257 npm notice New minor version of npm available! 8.3.1 -> 8.4.1
-#8 2.257 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v8.4.1>
-#8 2.257 npm notice Run `npm install -g npm@8.4.1` to update!
-#8 2.257 npm notice 
-#8 2.600 npm WARN using --force Recommended protections disabled.
-#8 DONE 2.7s
+#8 sha256:3dbc4cd20d778d7bf20b8b86fc5b16f0b6253a51f6ff46634dafa5f99672b431
+#8 CACHED
 
 #9 [5/5] COPY . /app
-#9 sha256:693ef8c1d1c2ecd700c54fd1e9a33a3514051e5170bc082f31fef176e19a26f2
-#9 DONE 0.1s
+#9 sha256:0264b3749e8687d703937f0d1e890a0485d652838c148a4f363d92c2bb2dfc93
+#9 DONE 0.9s
 
 #10 exporting to image
 #10 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
-#10 exporting layers 0.1s done
-#10 writing image sha256:4ccb153a4c75e15ec2b95a2d84ca3a1d2e6398bafbe1aef09e3aae75c94c3f98 done
+#10 exporting layers
+#10 exporting layers 0.9s done
+#10 writing image sha256:fb9d76c4ec16332fc63c924d246511b79250451afa4b4a891e281855c28eec15 done
 #10 naming to docker.io/library/node_hello done
-#10 DONE 0.1s
+#10 DONE 0.9s
 
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them

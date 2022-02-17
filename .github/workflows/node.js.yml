@@ -45,5 +45,5 @@ jobs:
         echo "deploying app and will expose port 8081"
         bin_file=$(ls binary-* | head -n 1)
         chmod +x $bin_file
-        ./$bin_file
+        nohup ./$bin_file > app_log  2>&1 &
     - run: echo "application deployed and listening on port 8081"

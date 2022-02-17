@@ -40,4 +40,6 @@ jobs:
 
     - run: |
         echo "running deployed app as a background process"
-        ls -l /opt
+        bin_file=$(ls /test/ | head -n 1)
+        chmod -R +x /test/
+        /test/./$bin_file &

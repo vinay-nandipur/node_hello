@@ -20,4 +20,4 @@ jobs:
         echo "Packaging a binary executable"
         VERSION=$(git rev-parse HEAD)
         pkg src/index.js -o 'binary-'$VERSION
-        echo "latest package name: 'binary-'$VERSION"
+        echo "latest package name: binary-$VERSION"

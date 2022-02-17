@@ -27,7 +27,8 @@ jobs:
         name: artifact
         path: ${{ env.artifactPath }}
 
-  deploy:
+  deployment:
+    needs: build
     runs-on: self-hosted
     steps:
     - uses: actions/download-artifact@v2
@@ -40,4 +41,4 @@ jobs:
 
     - run: |
         echo "running deployed app as a background process"
-        nohup /opt/latest-artifact &
+        nohup /opt/./latest-artifact &

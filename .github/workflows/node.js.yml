@@ -10,7 +10,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build_nodejs_app:
+    name: build_nodejs_app
     runs-on: self-hosted
     steps:
     - run: npm ci
@@ -27,8 +28,9 @@ jobs:
         name: artifact
         path: ${{ env.artifactPath }}
 
-  test:
-    needs: build
+  deploy_nodejs_app:
+    name: deploy_nodejs_app
+    needs: build_nodejs_app
     runs-on: self-hosted
     steps:
     - uses: actions/download-artifact@v2

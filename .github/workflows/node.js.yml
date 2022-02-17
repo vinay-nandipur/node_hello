@@ -16,3 +16,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - run: |
+        echo "Packaging a binary executable"
+        VERSION=$(git rev-parse HEAD)
+        pkg src/index.js -o 'binary-'$VERSION
+        echo "latest package name: 'binary-'$VERSION"

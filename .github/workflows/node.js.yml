@@ -31,7 +31,7 @@ jobs:
   deploy_nodejs_app:
     name: deploy_nodejs_app
     needs: build_nodejs_app
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, deployment]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2

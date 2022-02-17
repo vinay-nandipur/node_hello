@@ -31,16 +31,19 @@ jobs:
   deploy_nodejs_app:
     name: deploy_nodejs_app
     needs: build_nodejs_app
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16.x
+        cache: 'npm'
     - uses: actions/download-artifact@v2
       with:
         name: artifact
-        path: /test
-
     - run: |
         echo "deploying app and will expose port 8081"
-        bin_file=$(ls /test/ | head -n 1)
-        chmod -R +x /test/
-        /test/./$bin_file
+        bin_file=$(ls binary-* | head -n 1)
+        chmod +x $bin_file
+        ./$bin_file
     - run: echo "application deployed and listening on port 8081"

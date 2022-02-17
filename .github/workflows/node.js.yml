@@ -34,9 +34,9 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/download-artifact@v2
-    with:
-      name: artifact
-      path: /opt/latest-artifact
+      with:
+        name: artifact
+        path: /opt/latest-artifact
 
     - name: 'Echo download path'
       run: echo ${{steps.download.outputs.download-path}}

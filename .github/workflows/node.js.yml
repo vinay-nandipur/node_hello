@@ -27,7 +27,7 @@ jobs:
         name: artifact
         path: ${{ env.artifactPath }}
 
-  deployment:
+  test:
     needs: build
     runs-on: self-hosted
     steps:

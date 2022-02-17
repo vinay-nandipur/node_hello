@@ -36,11 +36,8 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: artifact
-        path: ${{ env.artifactPath }}
-
-    - name: 'Echo download path'
-      run: echo ${{steps.download.outputs.download-path}}
+        path: /opt
 
     - run: |
         echo "running deployed app as a background process"
-        nohup ${{ env.artifactPath }} &
+        ls -l /opt

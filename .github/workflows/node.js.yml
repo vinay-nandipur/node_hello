@@ -24,12 +24,12 @@ jobs:
         pkg src/index.js -o 'binary-'$VERSION
         echo "latest package name: binary-$VERSION"
         echo "artifactPath=$(ls binary-*)" >> $GITHUB_ENV
-    - uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+    # - uses: actions/cache@v2
+    #   with:
+    #     path: ~/.npm
+    #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-node-
     - uses: actions/upload-artifact@v2
       with:
         name: artifact
@@ -61,12 +61,12 @@ jobs:
     runs-on: [self-hosted, deployment]
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+    # - uses: actions/cache@v2
+    #   with:
+    #     path: ~/.npm
+    #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-node-
     - uses: actions/download-artifact@v2
       with:
         name: artifact
